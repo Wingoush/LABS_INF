@@ -106,8 +106,8 @@ int main() {
 ```
 
 ## Блок-схема программы
+![5(zel)](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/d7822154-e3a5-48dc-a7bf-f9c5a63177a7)
 
-![](C:\Users\DELL\source\repos\LABS_INF\Sem_2\Labs\5%20(Zel)\5(zel).png)
 
 ## Тесты
 
