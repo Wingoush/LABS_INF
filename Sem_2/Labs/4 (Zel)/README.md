@@ -125,8 +125,8 @@ int main()
 ```
 
 ## Блок-схема программы
+![4(Zel)](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/a6081fc6-495e-4c6e-b8ca-2eb69eb56cf1)
 
-![](C:\Users\DELL\Downloads\4(Zel).png)
 
 ## Тесты
 
