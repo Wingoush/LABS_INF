@@ -17,8 +17,7 @@
    (и до К+1 по кольцу вправо).
 
 ## Блок-схема программы
-
-![](C:\Users\DELL\source\repos\LABS_INF\Sem_2\Labs\4%20(Zel)\4(Zel).png)
+![4(Zel)](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/f1ce312a-3246-4300-bdbe-595ede5334d6)
 
 ## Код программы
 
