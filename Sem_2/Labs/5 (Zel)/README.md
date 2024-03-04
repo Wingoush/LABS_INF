@@ -13,6 +13,10 @@
 во втором столбце была равна второму элементу 
 одномерного массива и т. д. Нули не использовать.
 
+## Блок-схема программы
+
+![](C:\Users\DELL\source\repos\LABS_INF\Sem_2\Labs\5%20(Zel)\5%20(Zel).png)
+
 ## Код программы
 
 ```cpp
@@ -23,9 +27,12 @@ using namespace std;
 
 void array_fill(int* arr, int l) {
     srand(time(0));
+
     for (int i = 0; i < l; i++) {
         arr[i] = rand() % 100;
     }
+
+    return;
 }
 
 
@@ -39,6 +46,7 @@ int main() {
     while (!flag) {
         cout << "Type array length (1-" << arr_len << "): ";
         cin >> tmp;
+
         if (tmp <= arr_len && tmp >= 1) {
             l = tmp;
             flag = true;
@@ -72,7 +80,7 @@ int main() {
     }
 
     return 0;
-
+}
     /*
     Примеры работы программы:
 
@@ -102,12 +110,7 @@ int main() {
         [-14] [-38] [-22]
         [14] [38] [22]
     */
-}
 ```
-
-## Блок-схема программы
-
-![](C:\Users\DELL\source\repos\LABS_INF\Sem_2\Labs\5%20(Zel)\5(zel).png)
 
 ## Тесты
 

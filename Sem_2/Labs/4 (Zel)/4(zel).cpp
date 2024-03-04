@@ -11,7 +11,7 @@ int main()
     bool flag1 = false;
     bool flag2 = false;
 
-    while ( !flag1 ) {
+    while (!flag1) {
         cout << "Type array length (1-" << arr_len << "): ";
         cin >> tmp;
         if (tmp <= arr_len && tmp >= 1) {
@@ -30,7 +30,7 @@ int main()
         mx = tmp_mx;
     }
 
-    while ( !flag2 ) {
+    while (!flag2) {
         cout << "Type the K number (must be in array range): ";
         cin >> tmp;
         if (tmp <= real_arr_len && tmp > 0) {
@@ -72,6 +72,8 @@ int main()
         cout << " [" << arr[(counter - 1) % real_arr_len] << "] ";
     }
 
+    return 0;
+}
     /*
     Примеры работы программы:
 
@@ -99,6 +101,3 @@ int main()
     2.  [14]  [20]  [21]  [55]  [34]
     3.  [14]  [34]  [55]  [21]  [20]
     */
-
-    return 0;
-}

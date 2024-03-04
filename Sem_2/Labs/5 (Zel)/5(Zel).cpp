@@ -4,84 +4,87 @@
 using namespace std;
 
 void array_fill(int* arr, int l) {
-	srand(time(0));
-	for (int i = 0; i < l; i++) {
-		arr[i] = rand() % 100;
-	}
+    srand(time(0));
+
+    for (int i = 0; i < l; i++) {
+        arr[i] = rand() % 100;
+    }
+
+    return;
 }
 
 
 int main() {
-	const int arr_len = 100;
-	int l, tmp;
-	int arr[arr_len];
-	int arr2[arr_len][arr_len];
-	bool flag = false;
+    const int arr_len = 100;
+    int l, tmp;
+    int arr[arr_len];
+    int arr2[arr_len][arr_len];
+    bool flag = false;
 
-	while (!flag) {
-		cout << "Type array length (1-" << arr_len << "): ";
-		cin >> tmp;
-		if (tmp <= arr_len && tmp >= 1) {
-			l = tmp;
-			flag = true;
-		} else {
-			cout << "Error.\n";
-		}
-	}
+    while (!flag) {
+        cout << "Type array length (1-" << arr_len << "): ";
+        cin >> tmp;
 
-	array_fill(arr, l);
+        if (tmp <= arr_len && tmp >= 1) {
+            l = tmp;
+            flag = true;
+        } else {
+            cout << "Error.\n";
+        }
+    }
 
-	for (int i = 0; i < l; i++) {
-		cout << "[" << arr[i] << "] ";
-	}
-	cout << endl << endl;
+    array_fill(arr, l);
 
-	for (int i = 0; i < l; i++) {
-		arr2[0][i] = arr[i] * (2 - l % 2);
-	}
+    for (int i = 0; i < l; i++) {
+        cout << "[" << arr[i] << "] ";
+    }
+    cout << endl << endl;
 
-	for (int i = 0; i < l; i++) {
-		for (int j = 1; j < l; j++) {
-			arr2[j][i] = arr[i] * (1 - (2 * (j % 2)));
-		}
-	}
+    for (int i = 0; i < l; i++) {
+        arr2[0][i] = arr[i] * (2 - l % 2);
+    }
 
-	for (int i = 0; i < l; i++) {
-		for (int j = 0; j < l; j++) {
-			cout << "[" << arr2[i][j] << "] ";
-		}
-		cout << endl;
-	}
+    for (int i = 0; i < l; i++) {
+        for (int j = 1; j < l; j++) {
+            arr2[j][i] = arr[i] * (1 - (2 * (j % 2)));
+        }
+    }
 
-	return 0;
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < l; j++) {
+            cout << "[" << arr2[i][j] << "] ";
+        }
+        cout << endl;
+    }
 
-	/*
-	Ïðèìåðû ðàáîòû ïðîãðàììû:
-
-	Òåñò 1:
-	Âõîäíûå äàííûå: l = 1
-	Âûõîäíûå äàííûå:
-		[94]
-
-		[94]
-
-	Òåñò 2:
-	Âõîäíûå äàííûå: l = 4
-	Âûõîäíûå äàííûå:
-		[37] [48] [29] [76]
-
-		[74] [96] [58] [152]
-		[-37] [-48] [-29] [-76]
-		[37] [48] [29] [76]
-		[-37] [-48] [-29] [-76]
-
-	Òåñò 3:
-	Âõîäíûå äàííûå: l = 3
-	Âûõîäíûå äàííûå:
-		[14] [38] [22]
-
-		[14] [38] [22]
-		[-14] [-38] [-22]
-		[14] [38] [22]
-	*/
+    return 0;
 }
+    /*
+    ÐŸÑ€Ð¸Ð¼ÐµÑ€Ñ‹ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹:
+
+    Ð¢ÐµÑÑ‚ 1:
+    Ð’Ñ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: l = 1
+    Ð’Ñ‹Ñ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ:
+        [94]
+
+        [94]
+
+    Ð¢ÐµÑÑ‚ 2:
+    Ð’Ñ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: l = 4
+    Ð’Ñ‹Ñ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ:
+        [37] [48] [29] [76]
+
+        [74] [96] [58] [152]
+        [-37] [-48] [-29] [-76]
+        [37] [48] [29] [76]
+        [-37] [-48] [-29] [-76]
+
+    Ð¢ÐµÑÑ‚ 3:
+    Ð’Ñ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: l = 3
+    Ð’Ñ‹Ñ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ:
+        [14] [38] [22]
+
+        [14] [38] [22]
+        [-14] [-38] [-22]
+        [14] [38] [22]
+    */
