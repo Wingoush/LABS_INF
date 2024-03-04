@@ -9,8 +9,7 @@
 и справа налево)
 
 ## Блок-схема программы
-
-![](C:\Users\DELL\source\repos\LABS_INF\Sem_2\Labs\6%20(Zel)\6%20(Zel).png)
+![6 (Zel)](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/6c06e80b-ecff-427b-ad8a-63c0bca17551)
 
 ## Код программы
 
