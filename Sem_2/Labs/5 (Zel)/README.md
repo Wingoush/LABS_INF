@@ -14,8 +14,7 @@
 одномерного массива и т. д. Нули не использовать.
 
 ## Блок-схема программы
-
-![](C:\Users\DELL\source\repos\LABS_INF\Sem_2\Labs\5%20(Zel)\5%20(Zel).png)
+![5 (Zel)](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/00e5eecd-4aff-4df6-a4e7-58f66c820477)
 
 ## Код программы
 
