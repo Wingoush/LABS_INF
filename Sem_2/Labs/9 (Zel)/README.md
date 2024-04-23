@@ -12,8 +12,8 @@
    согласных букв.
 
 # Блок-Схема
+![9](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/dd7c529f-0b57-4947-abd6-f69d41c9d143)
 
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-01-24-9.png)
 
 # Код
 
