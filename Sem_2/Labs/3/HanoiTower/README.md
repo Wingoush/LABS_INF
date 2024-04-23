@@ -7,10 +7,7 @@
 
 
 # Блок-Схема
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-13-48-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-14-14-image.png)
+![hanoi](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/26ce0174-10d1-4437-b1f5-8df3ca21bb47)
 
 # Код
 
