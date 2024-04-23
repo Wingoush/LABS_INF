@@ -5,14 +5,7 @@
 Лабораторная работа № 13 - Сортировка Шелла
 
 # Блок-Схема
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-57-29-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-57-41-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-57-50-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-58-01-image.png)
+![13](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/ef6db757-ceb1-4d96-8dd3-cbf2e629fe04)
 
 # Код
 
