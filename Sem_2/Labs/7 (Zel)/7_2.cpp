@@ -23,9 +23,9 @@ int triangle(int k, ...) {
 }
 
 int main() {
-	cout << "Valid triangles: " << triangle(3, 1, 4, 2) << endl;;
-	cout << "Valid triangles: " << triangle(9, 1, 4, 2, 5, 2, 8, 10, 12, 15) << endl;;
-	cout << "Valid triangles: " << triangle(11, 1, 4, 2, 5, 2, 14, 7, 2, 9, 1, 12) << endl;;
+	cout << "Valid triangles: " << triangle(3, 1, 4, 2) << endl;
+	cout << "Valid triangles: " << triangle(9, 1, 4, 2, 5, 2, 8, 10, 12, 15) << endl;
+	cout << "Valid triangles: " << triangle(11, 1, 4, 2, 5, 2, 14, 7, 2, 9, 1, 12) << endl;
 
 	return 0;
 }

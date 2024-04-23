@@ -1,3 +1,20 @@
+Романов Артём Алексеевич (ИВТ-23-1Б)
+
+# Задание
+
+Лабораторная работа № 3 - Ханойская башня
+
+
+
+# Блок-Схема
+
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-13-48-image.png)
+
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-14-14-image.png)
+
+# Код
+
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -60,3 +77,28 @@ Disk 1 moved from B to A
 Disk 2 moved from B to C
 Disk 1 moved from A to C
 */
+```
+
+# Тесты
+
+```cpp
+Test 1:
+Type rings amount: 0
+Rod A - starting rod
+Rod B - middle rod
+Rod C - target rod
+No disks.
+```
+
+```cpp
+Test 2:
+Type rings amount: 1
+Rod A - starting rod
+Rod B - middle rod
+Rod C - target rod
+Disk 1 moved from A to C
+```
+
+```cpp
+
+```

@@ -1,3 +1,25 @@
+Романов Артём Алексеевич (ИВТ-23-1Б)
+
+# Задание
+
+Лабораторная работа № 7, Вариант 20 - Перегрузка функций
+
+Задание:
+
+а) для массива целых чисел находит количество четных
+элементов;
+б) для строки находит количество слов, начинающихся на
+букву «а» .
+
+# Блок-Схема
+
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-55-57-image.png)
+
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-56-06-image.png)
+
+# Код
+
+```cpp
 #include <iostream>
 #include <ctime>
 #include <string>
@@ -44,12 +66,13 @@ int count(string str) {
 }
 
 int main() {
+	int dataType;
+
 	cout << ""
 		"1. String \n"
 		"2. Array of integers \n"
 		"Select type of data: ";
 
-	int dataType;
 	cin >> dataType;
 	cin.ignore();
 
@@ -98,3 +121,34 @@ Type the array size: 10
 Array: [68] [1] [26] [59] [78] [34] [93] [45] [52] [81]
 Even numbers: 5
 */
+```
+
+# Тесты
+
+```cpp
+Test 1: Data type - String
+1. String
+2. Array of integers
+Select type of data: 1
+Type the string: abracadabra one two 2 ahaha under
+Words, starting with 'a': 2
+```
+
+```cpp
+Test 2: Data type - String
+1. String
+2. Array of integers
+Select type of data: 1
+Type the string: And un acara
+Words, starting with 'a': 1
+```
+
+```cpp
+Test 3: Data type - int array
+1. String
+2. Array of integers
+Select type of data: 2
+Type the array size: 10
+Array: [68] [1] [26] [59] [78] [34] [93] [45] [52] [81]
+Even numbers: 5
+```

@@ -9,8 +9,9 @@ void arrayPrint(string arr[], const int SIZE) {
 	for (int i = 0; i < SIZE; i++) {
 		cout << " [" << arr[i] << "] ";
 	}
-
 	cout << endl;
+
+	return;
 }
 
 string* arrayCreate(const int SIZE) {
@@ -61,7 +62,6 @@ string* deleteLast(string arr[], int size, int removeCount) {
 
 	arraySize = size - removeCount;
 	return arrNew;
-
 }
 
 int main() {

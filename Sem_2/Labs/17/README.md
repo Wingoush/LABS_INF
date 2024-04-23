@@ -1,3 +1,16 @@
+Романов Артём Алексеевич (ИВТ-23-1Б)
+
+# Задание
+
+Лабораторная работа № 17 - Поиск (Кнут-Моррис-Пратт и Бойер-Мур)
+
+# Блок-Схема
+
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-14-07-42-KMP.png)
+
+# Код
+
+```cpp
 #include <iostream>
 #include <string>
 
@@ -15,10 +28,12 @@ int* calcPrefixFunc(string key, int size) {
             lps[i] = len;
             len++;
             i++;
-        } else {
+        }
+        else {
             if (len != 0) {
                 len = lps[len - 1];
-            } else {
+            }
+            else {
                 lps[i] = 0;
                 i++;
             }
@@ -44,16 +59,16 @@ void knuthMorrisPrattSearch(string str, string key) {
         if (key_indx == key_size) {
             cout << "Pattern start index: " << str_indx - key_indx << endl;
             key_indx = lps[key_indx - 1];
-        } else if (str_indx < str_size && key[key_indx] != str[str_indx]) {
+        }
+        else if (str_indx < str_size && key[key_indx] != str[str_indx]) {
             if (key_indx != 0) {
                 key_indx = lps[key_indx - 1];
-            } else {
+            }
+            else {
                 str_indx++;
             }
         }
     }
-
-    return;
 }
 
 void charTableCalculate(string str, int size, int charTable[CHAR_TABLE_SIZE]) {
@@ -63,8 +78,6 @@ void charTableCalculate(string str, int size, int charTable[CHAR_TABLE_SIZE]) {
     for (int i = 0; i < size; i++) {
         charTable[(int)str[i]] = i;
     }
-
-    return;
 }
 
 void boyerMooreSearch(string str, string key) {
@@ -72,9 +85,10 @@ void boyerMooreSearch(string str, string key) {
     int key_size = key.size();
 
     int shift_table[CHAR_TABLE_SIZE];
-    int shift = 0;
 
     charTableCalculate(str, key_size, shift_table);
+
+    int shift = 0;
 
     while (shift <= (str_size - key_size)) {
         int j = key_size - 1;
@@ -86,13 +100,13 @@ void boyerMooreSearch(string str, string key) {
 
             if (shift + key_size < str_size) {
                 shift += key_size - shift_table[(int)str[shift + key_size]];
-            } else { shift++; }
-        } else {
+            }
+            else { shift++; }
+        }
+        else {
             shift += max(1, j - shift_table[(int)str[shift + j]]);
         }
     }
-
-    return;
 }
 
 int main() {
@@ -166,3 +180,45 @@ Pattern start index: 3
 Pattern start index: 6
 Pattern start index: 9
 */
+```
+
+# Тесты
+
+## Тест 1
+
+```cpp
+Type in string and search key:
+abra_abra
+abra
+
+1 - Knuth-Morris-Pratt (KMP) search
+2 - Booyer-Moore search
+Select search method: 1
+
+Pattern start index: 0
+Pattern start index: 5
+```
+
+## Тест 2
+
+```cpp
+Type in string and search key:
+abra_abrac_abra
+abr
+
+1 - Knuth-Morris-Pratt (KMP) search
+2 - Booyer-Moore search
+Select search method: 2
+
+Pattern start index: 0
+Pattern start index: 5
+Pattern start index: 11
+```
+
+## Тест 3
+
+```cpp
+Type array size: 10
+Array: [39] [19] [51] [50] [34] [11] [48] [60] [55] [16]
+Sorted array: [11] [16] [19] [34] [39] [48] [50] [51] [55] [60]
+```

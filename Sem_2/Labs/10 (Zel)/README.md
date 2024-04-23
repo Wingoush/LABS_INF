@@ -10,7 +10,13 @@
 
 ## Блок-схема программы
 
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-33-44-image.png)
 
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-34-05-image.png)
+
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-34-19-image.png)
+
+![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-34-31-image.png)
 
 ## Код программы
 
@@ -23,89 +29,89 @@ using namespace std;
 int arraySize;
 
 void arrayPrint(string arr[], const int SIZE) {
-	for (int i = 0; i < SIZE; i++) {
-		cout << " [" << arr[i] << "] ";
-	}
+    for (int i = 0; i < SIZE; i++) {
+        cout << " [" << arr[i] << "] ";
+    }
 
-	cout << endl;
+    cout << endl;
 }
 
 string* arrayCreate(const int SIZE) {
-	string* arr = new string[SIZE];
+    string* arr = new string[SIZE];
 
-	return arr;
+    return arr;
 }
 
 void arrayFill(string arr[], int size) {
-	for (int i = 0; i < size; i++) {
-		cout << "Type " << i + 1 << " string: ";
-		getline(cin, arr[i]);
-	}
+    for (int i = 0; i < size; i++) {
+        cout << "Type " << i + 1 << " string: ";
+        getline(cin, arr[i]);
+    }
 
-	return;
+    return;
 }
 
 string* deleteSame(string arr[], int size) {
-	int sizeChange = 0;
-	for (int i = 0; i < size - 1; i++) {
-		for (int j = i + 1; j < size; j++) {
-			if (arr[j] == arr[i] && arr[j] != "") {
-				arr[j] = "";
-				sizeChange++;
-			}
-		}
-	}
+    int sizeChange = 0;
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (arr[j] == arr[i] && arr[j] != "") {
+                arr[j] = "";
+                sizeChange++;
+            }
+        }
+    }
 
-	string* arrNew = arrayCreate(size - sizeChange);
-	int arrayIndex = 0;
-	for (int i = 0; i < size; i++) {
-		if (arr[i] != "") { arrNew[arrayIndex] = arr[i]; arrayIndex++; }
-	}
+    string* arrNew = arrayCreate(size - sizeChange);
+    int arrayIndex = 0;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] != "") { arrNew[arrayIndex] = arr[i]; arrayIndex++; }
+    }
 
 
-	arraySize = size - sizeChange;
-	return arrNew;
+    arraySize = size - sizeChange;
+    return arrNew;
 }
 
 string* deleteLast(string arr[], int size, int removeCount) {
-	if (removeCount > size) {
-		arraySize = 0;
-		return arrayCreate(0);
-	}
+    if (removeCount > size) {
+        arraySize = 0;
+        return arrayCreate(0);
+    }
 
-	string* arrNew = arrayCreate(size - removeCount);
-	for (int i = 0; i < size - removeCount; i++) { arrNew[i] = arr[i]; }
+    string* arrNew = arrayCreate(size - removeCount);
+    for (int i = 0; i < size - removeCount; i++) { arrNew[i] = arr[i]; }
 
-	arraySize = size - removeCount;
-	return arrNew;
+    arraySize = size - removeCount;
+    return arrNew;
 
 }
 
 int main() {
-	int trimCount;
+    int trimCount;
 
-	cout << "Type in array length: ";
-	cin >> arraySize;
-	cin.ignore();
+    cout << "Type in array length: ";
+    cin >> arraySize;
+    cin.ignore();
 
-	string* arrayDefault = arrayCreate(arraySize);
-	arrayFill(arrayDefault, arraySize);
-	cout << "Array: "; arrayPrint(arrayDefault, arraySize);
+    string* arrayDefault = arrayCreate(arraySize);
+    arrayFill(arrayDefault, arraySize);
+    cout << "Array: "; arrayPrint(arrayDefault, arraySize);
 
-	string* arrayNoClones = deleteSame(arrayDefault, arraySize);
-	cout << "Array (No clones): "; arrayPrint(arrayNoClones, arraySize);
+    string* arrayNoClones = deleteSame(arrayDefault, arraySize);
+    cout << "Array (No clones): "; arrayPrint(arrayNoClones, arraySize);
 
-	cout << "Type the amount of last elements to trim: ";
-	cin >> trimCount;
+    cout << "Type the amount of last elements to trim: ";
+    cin >> trimCount;
 
-	string* arrayTrimmed = deleteLast(arrayNoClones, arraySize, trimCount);
-	cout << "Array (No clones and trimmed): "; arrayPrint(arrayTrimmed, arraySize);
+    string* arrayTrimmed = deleteLast(arrayNoClones, arraySize, trimCount);
+    cout << "Array (No clones and trimmed): "; arrayPrint(arrayTrimmed, arraySize);
 
-	delete[] arrayDefault;
-	delete[] arrayNoClones;
-	delete[] arrayTrimmed;
+    delete[] arrayDefault;
+    delete[] arrayNoClones;
+    delete[] arrayTrimmed;
 
-	return 0;
+    return 0;
 }
 /*
 Tests:
@@ -161,7 +167,6 @@ Array:  [one]  [two]  [three]  [four]
 Array (No clones):  [one]  [two]  [three]  [four]
 Type the amount of last elements to trim: 2
 Array (No clones and trimmed):  [one]  [two]
-
 ```
 
 Тест 2:

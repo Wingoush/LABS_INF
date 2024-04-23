@@ -7,8 +7,8 @@ void arrayPrint(int arr[], const int SIZE) {
     for (int i = 0; i < SIZE; i++) {
         cout << "[" << arr[i] << "] ";
     }
-
     cout << endl;
+    return;
 }
 
 int* arrayCreate(const int SIZE) {
@@ -36,8 +36,8 @@ int split(int arr[], int low, int high) {
 
     int i = low, j = high;
     while (i < pos && j > pos) {
-        while (arr[i] < pivot) i++;
-        while (arr[j] > pivot) j--;
+        while (arr[i] < pivot) { i++; }
+        while (arr[j] > pivot) { j--; }
 
         if (i < pos && j > pos) {
             swap(arr[i++], arr[j--]);
@@ -52,6 +52,8 @@ void sortHoare(int arr[], int low, int high) {
     int pI = split(arr, low, high);
     sortHoare(arr, low, pI - 1);
     sortHoare(arr, pI + 1, high);
+
+    return;
 }
 
 int menu() {
