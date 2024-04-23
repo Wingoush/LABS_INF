@@ -187,9 +187,14 @@ Array (No clones and trimmed):  [one]  [two]  [three]
 Тест 3:
 
 ```cpp
-[14]  [76]  [20]  [21]  [55]  [34]  [76]
-
-1.  [14]  [76]  [20]  [21]  [55]  [34]  [76]
-2.  [14]  [20]  [21]  [55]  [34]
-3.  [14]  [34]  [55]  [21]  [20]
+Type in array length: 5
+Type 1 string: one
+Type 2 string: two
+Type 3 string: three
+Type 4 string: two
+Type 5 string: one
+Array:  [one]  [two]  [three]  [two]  [one]
+Array (No clones):  [one]  [two]  [three]
+Type the amount of last elements to trim: 10
+Array (No clones and trimmed):
 ```
