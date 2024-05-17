@@ -61,7 +61,4 @@ void UpgradesWindow::updateData(){
     ui->ContractUpgrade->setText("Сменить контракт на\nболее выгодный\n" + QString::number(contractUpgradeCost) + '$');
 }
 
-UpgradesWindow::~UpgradesWindow()
-{
-    delete ui;
-}
+UpgradesWindow::~UpgradesWindow(){ delete ui; }

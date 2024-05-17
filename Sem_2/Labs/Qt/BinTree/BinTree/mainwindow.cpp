@@ -148,34 +148,34 @@ void MainWindow::insertNodeBTN(){
 }
 
 // Балансировка дерева
-void storeinorderBypass(Node* root, vector<char> &values){
+void translateBypass(Node* root, vector<char> &translatedTree){
     if (root == nullptr){ return; }
 
-    storeinorderBypass(root->left, values);
-    values.push_back(root->key);
-    storeinorderBypass(root->right, values);
+    translateBypass(root->left, translatedTree);
+    translatedTree.push_back(root->key);
+    translateBypass(root->right, translatedTree);
 
     return;
 }
-Node* buildBalancedTree(const vector<char> &values, int start, int end){
+Node* buildBalancedTree(const vector<char> &translatedTree, int start, int end){
     if (start > end){ return nullptr; }
 
     int mid = (start + end) / 2;
-    Node* root = new Node(values[mid]);
+    Node* root = new Node(translatedTree[mid]);
 
-    root->left = buildBalancedTree(values, start, mid - 1);
-    root->right = buildBalancedTree(values, mid + 1, end);
+    root->left = buildBalancedTree(translatedTree, start, mid - 1);
+    root->right = buildBalancedTree(translatedTree, mid + 1, end);
 
     return root;
 }
 Node* balanceTree(Node* root){
-    vector<char> values;
-    storeinorderBypass(root, values);
+    vector<char> translatedTree;
+    translateBypass(root, translatedTree);
 
-    if (values.empty()){ return nullptr; }
-    sort(values.begin(), values.end());
+    if (translatedTree.empty()){ return nullptr; }
+    sort(translatedTree.begin(), translatedTree.end());
 
-    return buildBalancedTree(values, 0, values.size() - 1);
+    return buildBalancedTree(translatedTree, 0, translatedTree.size() - 1);
 }
 void MainWindow::balanceBTN(){
     if (root == nullptr){ return; }
@@ -196,7 +196,7 @@ void MainWindow::createTree(){
     srand(time(0));
     root = new Node(rand()%100-rand()%100);
 
-    for(int i = 0; i < rand()%100; i++){
+    for(int i = 0; i < 7 + rand()%100; i++){
         insertNode(root, (rand()%100-rand()%100));
     }
 
@@ -207,12 +207,14 @@ void MainWindow::createTree(){
 // Поиск количества значений в дереве
 int findKey(Node* node, char key){
     if (node == nullptr){ return 0; }
+
     if (node->key == key){ return 1 + findKey(node->right, key) + findKey(node->left, key);}
 
     return findKey(node->right, key) + findKey(node->left, key);
 }
 void MainWindow::keyCountBTN(){
     if (root == nullptr){ return; }
+
     int key = (ui->NodeEntry->text()).toInt();
 
     int count = findKey(root, key);

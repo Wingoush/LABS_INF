@@ -9,20 +9,14 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    gamewindow.cpp \
     main.cpp \
-    popup.cpp \
-    upgradeswindow.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    gamewindow.h \
-    popup.h \
-    upgradeswindow.h
+    mainwindow.h
 
 FORMS += \
-    gamewindow.ui \
-    popup.ui \
-    upgradeswindow.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
