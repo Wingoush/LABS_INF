@@ -5,16 +5,7 @@
 Лабораторная работа № 14 - Сортировка Хоара
 
 # Блок-Схема
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-13-30-38-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-13-30-52-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-13-31-05-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-13-31-13-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-13-31-23-image.png)
+![14](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/b9637047-cedd-4eac-bdd5-d818809e0e94)
 
 # Код
 

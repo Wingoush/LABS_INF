@@ -12,10 +12,7 @@
 букву «а» .
 
 # Блок-Схема
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-55-57-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-56-06-image.png)
+![7_1](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/e811a551-c913-435c-8e94-5a769888789e)
 
 # Код
 

@@ -5,8 +5,7 @@
 Лабораторная работа № 17 - Поиск (Кнут-Моррис-Пратт и Бойер-Мур)
 
 # Блок-Схема
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-14-07-42-KMP.png)
+![KMP](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/78c9bc81-a2b4-4b78-9a62-c75d293e8fcf)
 
 # Код
 

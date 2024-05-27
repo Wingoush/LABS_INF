@@ -16,10 +16,7 @@
 с количеством параметров 3, 9, 11.
 
 # Блок-Схема
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-16-16-49-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-16-17-42-image.png)
+![7_2](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/2ce70bb3-e720-4eea-a9e0-2d8ba6ff0566)
 
 # Код
 

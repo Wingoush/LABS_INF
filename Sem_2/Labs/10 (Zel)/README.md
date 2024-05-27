@@ -9,14 +9,7 @@
 из него К последних строк.
 
 ## Блок-схема программы
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-33-44-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-34-05-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-34-19-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-23-12-34-31-image.png)
+![10](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/49794ee9-fa51-4fa1-b10a-5139ea3deebb)
 
 ## Код программы
 

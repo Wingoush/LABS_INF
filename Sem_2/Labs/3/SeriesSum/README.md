@@ -5,12 +5,7 @@
 Лабораторная работа № 3, Сумма серий
 
 # Блок-Схема
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-26-12-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-23-54-image.png)
-
-![](C:\Users\DELL\AppData\Roaming\marktext\images\2024-04-21-15-24-12-image.png)
+![series](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/56fb0de0-96e8-4c9a-873d-f0bbbcc9606b)
 
 # Код
 

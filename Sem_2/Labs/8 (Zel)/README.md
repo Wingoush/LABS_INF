@@ -18,6 +18,7 @@
 указанным номером.
 
 # Блок-Схема
+![8](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/0735dcfa-bf4d-4147-b75f-db046ce07134)
 
 # Код
 
