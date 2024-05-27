@@ -13,6 +13,7 @@
 ![image](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/972ea587-8762-4ea4-80b2-cbd349473d34)
 
 ## 3 Вариант
+![image](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/997c85e2-0822-466a-b09d-c606610b1c70)
 
 # Код
 
