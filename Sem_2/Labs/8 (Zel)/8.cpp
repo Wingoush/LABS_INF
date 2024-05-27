@@ -32,7 +32,9 @@ void print_stadium(stadium* stad) {
         << "    Name:    " << stad->name << endl
         << "    Year:    " << stad->year << endl
         << "    Fields:  " << stad->fields << endl
-        << "    Sports:  " << stad->sports << endl << endl;;
+        << "    Sports:  " << stad->sports << endl << endl;
+
+    return;
 }
 
 stadium* add_stadium() {
@@ -70,14 +72,15 @@ void list::push(stadium* stad) {
         stad->next = nullptr;
 
         size = 1;
-    }
-    else {
+    } else {
         stad->prev = head;
         head->next = stad;
         head = stad;
 
         size++;
     }
+
+    return;
 }
 
 void list::remove(int index) {
@@ -104,24 +107,23 @@ void list::remove(int index) {
     if (temp->next == nullptr) {
         temp->prev->next = nullptr;
         head = temp->prev;
-    }
-    else if (temp->prev != nullptr) {
+    } else if (temp->prev != nullptr) {
         temp->prev->next = temp->next;
         temp->next->prev = temp->prev;
-
     }
 
     if (temp->prev == nullptr) {
         temp->next->prev = nullptr;
         tail = temp->next;
-    }
-    else if (temp->next != nullptr) {
+    }else if (temp->next != nullptr) {
         temp->next->prev = temp->prev;
         temp->prev->next = temp->next;
     }
 
     size--;
     delete temp;
+
+    return;
 }
 
 void list::add(stadium* stad, int index) {
@@ -137,8 +139,7 @@ void list::add(stadium* stad, int index) {
 
         tail->prev = stad;
         tail = stad;
-    }
-    else {
+    } else {
         stad->next = temp;
         stad->prev = temp->prev;
 
@@ -147,6 +148,8 @@ void list::add(stadium* stad, int index) {
     }
 
     size++;
+
+    return;
 }
 
 void list::print() {
@@ -158,10 +161,11 @@ void list::print() {
             if (i > 0) { temp = temp->next; }
             print_stadium(temp);
         }
-    }
-    else {
+    } else {
         cout << "No stadiums." << endl << endl;
     }
+
+    return;
 }
 
 void list::write(ofstream& out) {
@@ -175,7 +179,11 @@ void list::write(ofstream& out) {
                 << "Fields: " << temp->fields << endl
                 << "Sports: " << temp->sports << endl << endl;
         }
+    }else {
+        cout << "Nothing to write in file.";
     }
+
+    return;
 }
 
 void list::read(ifstream& in) {
@@ -205,6 +213,8 @@ void list::read(ifstream& in) {
 
         push(temp);
     }
+
+    return;
 }
 
 int main() {
@@ -212,7 +222,7 @@ int main() {
     in.open("File1");
 
     if (!in) {
-        cerr << "Error. Can't open file 'File1'." << endl;
+        cout << "Error. Can't open file 'File1'." << endl;
         return 1;
     }
 
@@ -240,17 +250,13 @@ int main() {
 
     stadiums.print();
 
-
-
-    cout << "Insert before index: ";
-
     int index;
+    cout << "Insert before index: ";
     cin >> index;
 
     if (index > stadiums.size || index < 0) {
         cout << "Error. Invalid index." << endl;
-    }
-    else {
+    } else {
         stadiums.add(add_stadium(), index);
         stadiums.add(add_stadium(), index + 1);
     }
@@ -262,7 +268,7 @@ int main() {
     out.open("File2");
 
     if (!out) {
-        cerr << "Error. Can't open 'File2'." << endl;
+        cout << "Error. Can't open 'File2'." << endl;
         return 1;
     }
 

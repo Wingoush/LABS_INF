@@ -9,6 +9,8 @@ void arrayPrint(int arr[], const int SIZE) {
     }
 
     cout << endl;
+
+    return;
 }
 
 int* arrayCreate(const int SIZE) {
@@ -55,6 +57,8 @@ void sortBucket(int arr[], const int SIZE) {
             arr[indx++] = buckets[i][j];
         }
     }
+
+    return;
 }
 
 void sortCounting(int arr[], const int SIZE) {
@@ -89,7 +93,8 @@ void sortCounting(int arr[], const int SIZE) {
         arr[i] = output[i];
     }
 
-    delete[] count;
+    delete[] count, output;
+    return;
 }
 
 void merge(int arr[], int start, int mid, int end) {
@@ -110,8 +115,7 @@ void merge(int arr[], int start, int mid, int end) {
     while (i < n1 && j < n2) {
         if (left[i] <= right[j]) {
             arr[k++] = left[i++];
-        }
-        else {
+        } else {
             arr[k++] = right[j++];
         }
     }
@@ -133,6 +137,8 @@ void sortMerge(int arr[], int start, int end) {
         sortMerge(arr, mid + 1, end);
         merge(arr, start, mid, end);
     }
+
+    return;
 }
 
 int split(int arr[], int low, int high) {
@@ -152,14 +158,17 @@ int split(int arr[], int low, int high) {
 
 void sortQuick(int arr[], int low, int high) {
     if (low < high) {
-        int pi = split(arr, low, high);
-        sortQuick(arr, low, pi - 1);
-        sortQuick(arr, pi + 1, high);
+        int splitIndex = split(arr, low, high);
+        sortQuick(arr, low, splitIndex - 1);
+        sortQuick(arr, splitIndex + 1, high);
     }
+
+    return;
 }
 
 void sortMenu() {
     int arraySize;
+    int sortingMethod;
 
     cout << "Type array size: ";
     cin >> arraySize;

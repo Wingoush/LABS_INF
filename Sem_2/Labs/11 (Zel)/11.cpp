@@ -31,8 +31,7 @@ void list::push(node* n) {
         tail = n;
 
         size = 1;
-    }
-    else {
+    } else {
         head->next = n;
         n->prev = head;
 
@@ -56,23 +55,22 @@ void list::remove(string key) {
                 head == nullptr;
 
                 return;
-            }
-            else if (temp->next == nullptr) {
+            } else if (temp->next == nullptr) {
                 temp->prev->next = nullptr;
                 head = temp->prev;
-            }
-            else if (temp->prev == nullptr) {
+            } else if (temp->prev == nullptr) {
                 temp->next->prev = nullptr;
                 tail = temp->next;
-            }
-            else {
+            } else {
                 temp->prev->next = temp->next;
                 temp->next->prev = temp->prev;
             }
         }
     }
+
     size--;
     delete temp;
+
     return;
 }
 
@@ -86,8 +84,7 @@ void list::add(node* n, string key) {
                 n->prev = head;
 
                 head = n;
-            }
-            else {
+            } else {
                 n->next = temp->next;
                 n->prev = temp;
 
@@ -99,6 +96,8 @@ void list::add(node* n, string key) {
             return;
         }
     }
+
+    return;
 }
 
 void list::print() {
@@ -107,8 +106,7 @@ void list::print() {
         for (; temp != nullptr; temp = temp->next) {
             cout << temp->s << endl;
         }
-    }
-    else {
+    } else {
         cout << "List is empty.";
     }
     return;
@@ -120,7 +118,10 @@ void list::write(ofstream& out) {
         for (; temp != nullptr; temp = temp->next) {
             out << temp->s << endl;
         }
+    } else {
+        cout << "Nothing to write in file.";
     }
+    return;
 }
 
 void list::read(ifstream& in) {
@@ -133,6 +134,8 @@ void list::read(ifstream& in) {
 
         push(temp);
     }
+
+    return;
 }
 
 int main() {
@@ -142,7 +145,8 @@ int main() {
     in.open("F1");
 
     if (!in) {
-        cerr << "Error. File 'F1' is not open." << endl;
+        cout << "Error. File 'F1' is not open." << endl;
+        return;
     }
 
     strs.read(in);
@@ -179,7 +183,8 @@ int main() {
     out.open("F2");
 
     if (!out) {
-        cerr << "Error. File 'F2' is not open." << endl;
+        cout << "Error. File 'F2' is not open." << endl;
+        return;
     }
 
     strs.print();
