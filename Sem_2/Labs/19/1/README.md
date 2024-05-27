@@ -13,6 +13,7 @@
 4. Изменние данных через функции класса
 
 # UML - Диаграмма
+![image](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/66644f07-8dcc-4f89-b79b-afe8ae01a80f)
 
 # Код
 
