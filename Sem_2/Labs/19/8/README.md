@@ -14,6 +14,7 @@
 8. Нарисовать диаграмму классов и диаграмму объектов.
 
 # UML - Диаграмма
+![image](https://github.com/Wingoush/LABS_PSTU_2023/assets/147124195/f4ddbdcd-29de-4eb9-9c47-7e9bf5826a7c)
 
 # Код
 
